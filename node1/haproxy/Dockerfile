@@ -1,5 +1,4 @@
-FROM haproxy:alpine
-RUN apk add perl
+FROM haproxy:v1.0.0
 COPY haproxy.cfg .
 RUN mkdir -p /etc/haproxy &&\
     cp haproxy.cfg /etc/haproxy/haproxy.cfg
