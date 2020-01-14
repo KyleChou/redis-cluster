@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services: 
   keepalived: 
     build: ./keepalived
@@ -28,7 +28,7 @@ services:
       - HAPROXY_BACKEND3=10.10.0.3:6379
     network_mode: bridge
     ports: 
-      - "8080:80"
+      - "28080:80"
       - "6380:6379"
     restart: always
   redis01: 
