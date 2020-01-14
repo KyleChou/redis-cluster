@@ -1,4 +1,4 @@
-FROM redis:alpine
+FROM redis:5.0.7-alpine
 COPY redis-entrypoint.sh .
 RUN mkdir -p /etc/redis &&\
     mkdir -p /var/lib/redis/sentinel &&\

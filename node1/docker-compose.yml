@@ -4,7 +4,7 @@ services:
     build: ./keepalived
     container_name: keepalived
     environment: 
-      - KEEPALIVED_INTERFACE=ens18
+      - KEEPALIVED_INTERFACE=ens192
       - KEEPALIVED_PRIORITY=100
       - KEEPALIVED_VIRTUAL_IP=10.10.0.5
       - KEEPALIVED_PASSWORD=123
