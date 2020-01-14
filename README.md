@@ -1,6 +1,8 @@
 # redis-cluster
 redis-cluster docker with sentinel , haproxy , keepalived 
 
+node01 是redis master
+
 #install on node1
 docker-compose build && docker-compose up -d
 
