@@ -9,6 +9,8 @@ services:
       - KEEPALIVED_VIRTUAL_IP=10.10.0.5
       - KEEPALIVED_PASSWORD=123
       - KEEPALIVED_ROUTER_ID=13
+      - LANG=en_US.utf8
+      - TZ=Asia/Shanghai
     network_mode: host
     privileged: true
     restart: always
@@ -26,6 +28,8 @@ services:
       - HAPROXY_BACKEND1=10.10.0.1:6379
       - HAPROXY_BACKEND2=10.10.0.2:6379
       - HAPROXY_BACKEND3=10.10.0.3:6379
+      - LANG=en_US.utf8
+      - TZ=Asia/Shanghai
     network_mode: bridge
     ports: 
       - "28080:80"
@@ -43,6 +47,8 @@ services:
       - SENTINEL_DOWN_AFTER=1000
       - SENTINEL_FAILOVER=5000
       - REDIS_MAXMEMORY=2gb
+      - LANG=en_US.utf8
+      - TZ=Asia/Shanghai
     network_mode: bridge
     ports: 
       - "6379:6379"
